@@ -3,9 +3,18 @@
   "version": "1.0.0",
   "private": true,
   "description": "Cortex — operating system for the AI age",
+  "main": "server/index.js",
+  "type": "module",
   "scripts": {
     "client": "npm --prefix client run dev",
     "server": "npm --prefix server run dev",
-    "build": "npm --prefix client run build"
+    "start": "node server/index.js",
+    "build": "cd client && npm install --include=dev --production=false && npm run build"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "mongoose": "^9.6.1"
   }
 }
