@@ -1,0 +1,11 @@
+{
+  "name": "cortex",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Cortex — operating system for the AI age",
+  "scripts": {
+    "client": "npm --prefix client run dev",
+    "server": "npm --prefix server run dev",
+    "build": "npm --prefix client run build"
+  }
+}

@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-ink-900 font-body text-white/80 antialiased;
+    -webkit-font-smoothing: antialiased;
+  }
+  ::selection {
+    background: rgba(34, 211, 238, 0.35);
+    color: #fff;
+  }
+}
+
+@layer utilities {
+  .text-gradient-ai {
+    background: linear-gradient(135deg, #67e8f9 0%, #a78bfa 50%, #22d3ee 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .glass {
+    background: rgba(16, 19, 42, 0.55);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+  }
+  .grid-bg {
+    background-image:
+      linear-gradient(rgba(34, 211, 238, 0.08) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(34, 211, 238, 0.08) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    scrollbar-width: none;
+  }
+}
